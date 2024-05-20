@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, #2980b9, #2c3e50);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select, input[type="datetime-local"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .links {
+            text-align: center;
+        }
+        .links a {
+            margin-right: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>DEVELUPS Attendance Management System</h1>
+            <form action="/record_action" method="POST">
+                <label for="employee_name">Select Employee:</label>
+                <select name="employee_name" id="employee_name">
+                    <option value="John">John</option>
+                    <option value="Jane">Jane</option>
+                    <!-- Add more options for other employees -->
+                </select>
+                <label for="datetime">Select Date and Time:</label>
+                <input type="datetime-local" id="datetime" name="datetime" required>
+                <label for="action">Select Action:</label>
+                <select name="action" id="action">
+                    <option value="check_in">Check In</option>
+                    <option value="check_out">Check Out</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+            <div class="links">
+                <a href="/attendance">View Attendance Records</a>
+                <a href="/download_attendance">Download Attendance Records</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
