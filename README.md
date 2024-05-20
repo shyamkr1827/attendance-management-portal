@@ -19,3 +19,7 @@ attendance_app/
 │       └── style.css
 ├── uploads/
 │   └── (this is where your Excel files will be stored)
+
+
+The link to the live porta :
+https://shyamkr1827.pythonanywhere.com/
